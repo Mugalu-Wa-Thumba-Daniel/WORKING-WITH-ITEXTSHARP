@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56fe4900-3975-402e-a41d-59dd2f3c0d08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/database/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/database/StudentDataLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/ActionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/StudentTablePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/model/StudentTableModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/pdf/StudentPDFGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/util/DateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/util/DialogUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/WorkingWithItexsharp/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/StudentTablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/StudentTablePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/model/StudentTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/model/StudentTableModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/pdf/StudentPDFGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/pdf/StudentPDFGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +44,30 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/# IUEA_COURSES/Y2 SEMESTER 2/Applied Object Oriented Programming/Solutions/Practical/mysql-connector-j-9.2.0.jar",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WorkingWithItexsharp.App" />
+      <module name="WORKING_WITH_ITEXTSHARP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="WorkingWithItexsharp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

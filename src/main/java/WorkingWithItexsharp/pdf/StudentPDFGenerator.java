@@ -7,9 +7,10 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.element.Cell;
+import com.itextpdf.layout.properties.UnitValue;
+import com.itextpdf.layout.properties.HorizontalAlignment;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.File;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -45,14 +46,14 @@ public class StudentPDFGenerator {
                 Paragraph title = new Paragraph("Rapport des Étudiants")
                         .setFontSize(20)
                         .setBold()
-                        .setTextAlignment(com.itextpdf.layout.property.TextAlignment.CENTER);
+                        .setHorizontalAlignment(HorizontalAlignment.CENTER);
                 document.add(title);
 
                 // Ajouter un timestamp
                 String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
                 Paragraph dateTime = new Paragraph("Date du rapport : " + timestamp)
                         .setFontSize(12)
-                        .setTextAlignment(com.itextpdf.layout.property.TextAlignment.RIGHT);
+                        .setHorizontalAlignment(HorizontalAlignment.RIGHT);
                 document.add(dateTime);
 
                 // Ajouter un espace avant le tableau
@@ -60,7 +61,7 @@ public class StudentPDFGenerator {
 
                 // Créer un tableau pour afficher les données des étudiants
                 Table table = new Table(new float[]{1, 3, 2, 3, 4}); // Largeur des colonnes
-                table.setWidthPercent(100);
+                table.setWidth(UnitValue.createPercentValue(100)); // Définir la largeur du tableau
 
                 // Ajouter les en-têtes au tableau
                 table.addHeaderCell(new Cell().add(new Paragraph("ID").setBold()));

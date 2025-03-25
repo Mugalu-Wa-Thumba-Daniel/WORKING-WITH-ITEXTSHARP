@@ -3,10 +3,14 @@ package WorkingWithItexsharp.gui;
 import WorkingWithItexsharp.model.Student;
 import WorkingWithItexsharp.model.StudentTableModel;
 import WorkingWithItexsharp.database.StudentDataLoader;
+import WorkingWithItexsharp.pdf.StudentPDFGenerator;
+
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+
+import java.util.Collections;
 
 public class MainFrame extends JFrame {
 
@@ -31,7 +35,7 @@ public class MainFrame extends JFrame {
 
     private void initComponents() {
         // Initialiser le modèle avec une liste vide d'étudiants
-        tableModel = new StudentTableModel(List.of());
+        tableModel = new StudentTableModel(Collections.emptyList());
 
         // Initialiser le tableau avec le modèle
         studentTable = new JTable(tableModel);
@@ -84,7 +88,7 @@ public class MainFrame extends JFrame {
         }
 
         // Récupérez les données du modèle de table
-        List<Student> students = tableModel.students; // Accédez à la liste des étudiants
+        List<Student> students = tableModel.getStudents(); // Accédez à la liste des étudiants
 
         // Créez une instance de StudentPDFGenerator
         StudentPDFGenerator pdfGenerator = new StudentPDFGenerator();

@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
+import java.util.Collections;
+
 public class StudentTablePanel extends JPanel {
 
     private JTable studentTable; // JTable pour afficher les données
@@ -17,7 +19,7 @@ public class StudentTablePanel extends JPanel {
         setLayout(new BorderLayout());
 
         // Initialiser le modèle de table avec une liste vide
-        tableModel = new StudentTableModel(List.of());
+        tableModel = new StudentTableModel(Collections.emptyList());
         studentTable = new JTable(tableModel);
 
         // Ajouter le JTable à un JScrollPane pour le défilement

@@ -16,6 +16,10 @@ public class StudentTableModel extends AbstractTableModel {
         this.students = students;
     }
 
+    public List<Student> getStudents() {
+        return students;
+    }
+
     @Override
     public int getRowCount() {
         return students.size(); // Nombre de lignes (nombre d'étudiants)
