@@ -11,10 +11,10 @@ import java.util.List;
 
 public class StudentDataLoader {
 
-    // Requête SQL pour récupérer les données des étudiants
+    // SQL query to retrieve student data
     private static final String QUERY = "SELECT id, name, age, program, email FROM students";
 
-    // Méthode pour charger les données des étudiants depuis la base de données
+    // Method to load student data from the database
     public List<Student> loadStudents() {
         List<Student> students = new ArrayList<>();
 
@@ -22,9 +22,9 @@ public class StudentDataLoader {
              PreparedStatement statement = connection.prepareStatement(QUERY);
              ResultSet resultSet = statement.executeQuery()) {
 
-            // Itération sur les résultats de la requête
+            // Iterate through the query results
             while (resultSet.next()) {
-                // Créer un nouvel objet Student pour chaque enregistrement
+                // Create a new Student object for each record
                 Student student = new Student();
                 student.setId(resultSet.getInt("id"));
                 student.setName(resultSet.getString("name"));
@@ -32,12 +32,12 @@ public class StudentDataLoader {
                 student.setProgram(resultSet.getString("program"));
                 student.setEmail(resultSet.getString("email"));
 
-                // Ajouter l'étudiant à la liste
+                // Add the student to the list
                 students.add(student);
             }
 
         } catch (SQLException e) {
-            System.err.println("Erreur lors du chargement des données des étudiants : " + e.getMessage());
+            System.err.println("Error while loading student data: " + e.getMessage());
         }
 
         return students;

@@ -1,18 +1,18 @@
 package WorkingWithItexsharp.model;
 
 public class Student {
-    // Attributs de l'étudiant
-    private int id;                // Identifiant unique de l'étudiant
-    private String name;           // Nom de l'étudiant
-    private int age;               // Âge de l'étudiant
-    private String program;        // Programme/filiaire de l'étudiant
-    private String email;          // Adresse e-mail de l'étudiant
+    // Student attributes
+    private int id;                // Unique identifier for the student
+    private String name;           // Student's name
+    private int age;               // Student's age
+    private String program;        // Student's program/field of study
+    private String email;          // Student's email address
 
-    // Constructeur par défaut
+    // Default constructor
     public Student() {
     }
 
-    // Constructeur avec paramètres
+    // Constructor with parameters
     public Student(int id, String name, int age, String program, String email) {
         this.id = id;
         this.name = name;
@@ -21,7 +21,7 @@ public class Student {
         this.email = email;
     }
 
-    // Getters et Setters pour chaque attribut
+    // Getters and setters for each attribute
     public int getId() {
         return id;
     }
@@ -62,7 +62,7 @@ public class Student {
         this.email = email;
     }
 
-    // Méthode toString pour afficher les informations de l'étudiant
+    // toString method to display student information
     @Override
     public String toString() {
         return "Student{" +

@@ -5,23 +5,23 @@ import java.time.format.DateTimeFormatter;
 
 public class DateUtils {
 
-    // Format par défaut pour les dates
+    // Default date format
     private static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
-    // Méthode pour obtenir la date et l'heure actuelles formatées
+    // Method to get the current formatted date and time
     public static String getCurrentTimestamp() {
-        // Obtenir la date et l'heure actuelles
+        // Get the current date and time
         LocalDateTime now = LocalDateTime.now();
 
-        // Formater la date et l'heure
+        // Format the date and time
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DEFAULT_DATE_FORMAT);
         return now.format(formatter);
     }
 
-    // Méthode pour formater une date selon un format personnalisé
+    // Method to format a date using a custom format
     public static String formatDateTime(LocalDateTime dateTime, String format) {
         if (dateTime == null || format == null || format.isEmpty()) {
-            throw new IllegalArgumentException("La date ou le format ne peut pas être null ou vide.");
+            throw new IllegalArgumentException("Date or format cannot be null or empty.");
         }
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
         return dateTime.format(formatter);

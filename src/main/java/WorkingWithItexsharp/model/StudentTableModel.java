@@ -5,13 +5,13 @@ import java.util.List;
 
 public class StudentTableModel extends AbstractTableModel {
 
-    // Colonnes du tableau
-    private final String[] columnNames = {"ID", "Nom", "Âge", "Programme", "Email"};
+    // Table columns
+    private final String[] columnNames = {"ID", "Name", "Age", "Program", "Email"};
 
-    // Liste des étudiants
+    // List of students
     private final List<Student> students;
 
-    // Constructeur pour initialiser le modèle avec une liste d'étudiants
+    // Constructor to initialize the model with a list of students
     public StudentTableModel(List<Student> students) {
         this.students = students;
     }
@@ -22,50 +22,50 @@ public class StudentTableModel extends AbstractTableModel {
 
     @Override
     public int getRowCount() {
-        return students.size(); // Nombre de lignes (nombre d'étudiants)
+        return students.size(); // Number of rows (number of students)
     }
 
     @Override
     public int getColumnCount() {
-        return columnNames.length; // Nombre de colonnes
+        return columnNames.length; // Number of columns
     }
 
     @Override
     public String getColumnName(int columnIndex) {
-        return columnNames[columnIndex]; // Nom des colonnes
+        return columnNames[columnIndex]; // Column names
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        // Obtenez l'étudiant à l'index spécifié
+        // Get the student at the specified index
         Student student = students.get(rowIndex);
 
-        // Retournez la valeur de l'attribut correspondant à la colonne spécifiée
+        // Return the value of the attribute corresponding to the specified column
         switch (columnIndex) {
             case 0:
                 return student.getId(); // ID
             case 1:
-                return student.getName(); // Nom
+                return student.getName(); // Name
             case 2:
-                return student.getAge(); // Âge
+                return student.getAge(); // Age
             case 3:
-                return student.getProgram(); // Programme
+                return student.getProgram(); // Program
             case 4:
                 return student.getEmail(); // Email
             default:
-                return null; // Par défaut
+                return null; // Default
         }
     }
 
-    // Permet d'ajouter un étudiant à la liste et de rafraîchir le tableau
+    // Add a student to the list and refresh the table
     public void addStudent(Student student) {
         students.add(student);
-        fireTableRowsInserted(students.size() - 1, students.size() - 1); // Notification de mise à jour
+        fireTableRowsInserted(students.size() - 1, students.size() - 1); // Update notification
     }
 
-    // Permet de supprimer un étudiant à un index donné
+    // Remove a student at a given index
     public void removeStudent(int rowIndex) {
         students.remove(rowIndex);
-        fireTableRowsDeleted(rowIndex, rowIndex); // Notification de suppression
+        fireTableRowsDeleted(rowIndex, rowIndex); // Deletion notification
     }
 }

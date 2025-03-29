@@ -6,22 +6,22 @@ import java.awt.event.ActionListener;
 
 public class ActionPanel extends JPanel {
 
-    private JButton loadDataButton;     // Bouton pour charger les données
-    private JButton exportToPDFButton; // Bouton pour exporter en PDF
+    private JButton loadDataButton;     // Button to load data
+    private JButton exportToPDFButton; // Button to export to PDF
 
     public ActionPanel(ActionListener loadDataListener, ActionListener exportPDFListener) {
-        // Configuration du layout
+        // Layout configuration
         setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
-        // Initialisation des boutons
-        loadDataButton = new JButton("Charger les Données");
-        exportToPDFButton = new JButton("Exporter en PDF");
+        // Button initialization
+        loadDataButton = new JButton("Load Data");
+        exportToPDFButton = new JButton("Export to PDF");
 
-        // Ajout des gestionnaires d'événements
+        // Add event listeners
         loadDataButton.addActionListener(loadDataListener);
         exportToPDFButton.addActionListener(exportPDFListener);
 
-        // Ajouter les boutons au panneau
+        // Add buttons to the panel
         add(loadDataButton);
         add(exportToPDFButton);
     }

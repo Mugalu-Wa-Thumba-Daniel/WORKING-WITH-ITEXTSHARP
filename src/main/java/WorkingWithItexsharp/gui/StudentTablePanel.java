@@ -11,23 +11,23 @@ import java.util.Collections;
 
 public class StudentTablePanel extends JPanel {
 
-    private JTable studentTable; // JTable pour afficher les données
-    private StudentTableModel tableModel; // Modèle pour gérer les données des étudiants
+    private JTable studentTable; // JTable to display data
+    private StudentTableModel tableModel; // Model to manage student data
 
     public StudentTablePanel() {
-        // Configuration de base du panneau
+        // Basic panel configuration
         setLayout(new BorderLayout());
 
-        // Initialiser le modèle de table avec une liste vide
+        // Initialize the table model with an empty list
         tableModel = new StudentTableModel(Collections.emptyList());
         studentTable = new JTable(tableModel);
 
-        // Ajouter le JTable à un JScrollPane pour le défilement
+        // Add the JTable to a JScrollPane for scrolling
         JScrollPane scrollPane = new JScrollPane(studentTable);
-        add(scrollPane, BorderLayout.CENTER); // Ajouter le JScrollPane au panneau
+        add(scrollPane, BorderLayout.CENTER); // Add the JScrollPane to the panel
     }
 
-    // Méthode pour mettre à jour les données affichées
+    // Method to update displayed data
     public void updateTableData(List<Student> students) {
         tableModel = new StudentTableModel(students);
         studentTable.setModel(tableModel);

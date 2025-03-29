@@ -18,11 +18,11 @@ import java.time.format.DateTimeFormatter;
 
 public class StudentPDFGenerator {
 
-    // Méthode pour générer le PDF
+    // Method to generate the PDF
     public void generatePDF(List<Student> students) {
-        // Demander à l'utilisateur de choisir l'emplacement de sauvegarde
+        // Prompt the user to choose the save location
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Choisir l'emplacement de sauvegarde");
+        fileChooser.setDialogTitle("Choose save location");
         fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 
         int userSelection = fileChooser.showSaveDialog(null);
@@ -31,46 +31,46 @@ public class StudentPDFGenerator {
             File selectedFile = fileChooser.getSelectedFile();
             String filePath = selectedFile.getAbsolutePath();
 
-            // Ajouter l'extension .pdf si non spécifiée
+            // Add .pdf extension if not specified
             if (!filePath.endsWith(".pdf")) {
                 filePath += ".pdf";
             }
 
             try {
-                // Initialiser le document PDF
+                // Initialize the PDF document
                 PdfWriter writer = new PdfWriter(filePath);
                 PdfDocument pdfDoc = new PdfDocument(writer);
                 Document document = new Document(pdfDoc);
 
-                // Ajouter un titre au document
-                Paragraph title = new Paragraph("Rapport des Étudiants")
+                // Add a title to the document
+                Paragraph title = new Paragraph("Student Report")
                         .setFontSize(20)
                         .setBold()
                         .setHorizontalAlignment(HorizontalAlignment.CENTER);
                 document.add(title);
 
-                // Ajouter un timestamp
+                // Add a timestamp
                 String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-                Paragraph dateTime = new Paragraph("Date du rapport : " + timestamp)
+                Paragraph dateTime = new Paragraph("Report Date: " + timestamp)
                         .setFontSize(12)
                         .setHorizontalAlignment(HorizontalAlignment.RIGHT);
                 document.add(dateTime);
 
-                // Ajouter un espace avant le tableau
+                // Add space before the table
                 document.add(new Paragraph("\n"));
 
-                // Créer un tableau pour afficher les données des étudiants
-                Table table = new Table(new float[]{1, 3, 2, 3, 4}); // Largeur des colonnes
-                table.setWidth(UnitValue.createPercentValue(100)); // Définir la largeur du tableau
+                // Create a table to display student data
+                Table table = new Table(new float[]{1, 3, 2, 3, 4}); // Column widths
+                table.setWidth(UnitValue.createPercentValue(100)); // Set table width
 
-                // Ajouter les en-têtes au tableau
+                // Add headers to the table
                 table.addHeaderCell(new Cell().add(new Paragraph("ID").setBold()));
-                table.addHeaderCell(new Cell().add(new Paragraph("Nom").setBold()));
-                table.addHeaderCell(new Cell().add(new Paragraph("Âge").setBold()));
-                table.addHeaderCell(new Cell().add(new Paragraph("Programme").setBold()));
+                table.addHeaderCell(new Cell().add(new Paragraph("Name").setBold()));
+                table.addHeaderCell(new Cell().add(new Paragraph("Age").setBold()));
+                table.addHeaderCell(new Cell().add(new Paragraph("Program").setBold()));
                 table.addHeaderCell(new Cell().add(new Paragraph("Email").setBold()));
 
-                // Ajouter les données des étudiants au tableau
+                // Add student data to the table
                 for (Student student : students) {
                     table.addCell(String.valueOf(student.getId()));
                     table.addCell(student.getName());
@@ -79,17 +79,17 @@ public class StudentPDFGenerator {
                     table.addCell(student.getEmail());
                 }
 
-                // Ajouter le tableau au document
+                // Add the table to the document
                 document.add(table);
 
-                // Fermer le document
+                // Close the document
                 document.close();
 
-                // Confirmation de la réussite
-                JOptionPane.showMessageDialog(null, "PDF généré avec succès à l'emplacement : " + filePath);
+                // Success confirmation
+                JOptionPane.showMessageDialog(null, "PDF successfully generated at: " + filePath);
 
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Erreur lors de la génération du PDF : " + e.getMessage(), "Erreur", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Error while generating the PDF: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }

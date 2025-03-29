@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56fe4900-3975-402e-a41d-59dd2f3c0d08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/database/TestConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/database/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/database/StudentDataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/database/StudentDataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/ActionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/ActionPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/StudentTablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/gui/StudentTablePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/model/StudentTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/model/StudentTableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/pdf/StudentPDFGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/pdf/StudentPDFGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/util/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/util/DateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/util/DialogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WorkingWithItexsharp/util/DialogUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +35,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2uoNACZfqAD2QgNWFAc2703911w" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -38,6 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",

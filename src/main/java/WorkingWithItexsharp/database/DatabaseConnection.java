@@ -6,21 +6,21 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
 
-    // URL de connexion à la base de données (par exemple : MySQL)
+    // Database connection URL (e.g., MySQL)
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/university";
-    private static final String DATABASE_USER = "root"; // Nom d'utilisateur de la base de données
-    private static final String DATABASE_PASSWORD = "@Danne2024"; // Mot de passe de la base de données
+    private static final String DATABASE_USER = "root"; // Database username
+    private static final String DATABASE_PASSWORD = "########"; // Database password
 
-    // Méthode pour établir une connexion à la base de données
+    // Method to establish a connection to the database
     public static Connection getConnection() throws SQLException {
         try {
-            // Charger le pilote JDBC (optionnel avec les versions modernes de Java)
+            // Load the JDBC driver (optional with modern Java versions)
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Établir la connexion
+            // Establish the connection
             return DriverManager.getConnection(DATABASE_URL, DATABASE_USER, DATABASE_PASSWORD);
         } catch (ClassNotFoundException e) {
-            throw new SQLException("Le pilote JDBC n'a pas été trouvé. Assurez-vous qu'il est dans le classpath.", e);
+            throw new SQLException("The JDBC driver was not found. Make sure it is in the classpath.", e);
         }
     }
 }
